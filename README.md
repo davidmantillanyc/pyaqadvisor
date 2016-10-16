@@ -46,7 +46,7 @@ will do a "fuzzy match" to AqAdvisor's species list and match the closet one.
 This way you can specify your stocking list as "cardinal tetra" and not worry
 about the scientic name. 
 
-Please look at ``examples/example.ipynb`` for more information.
+Please look at ``examples/example.py`` and  ``examples/example.ipynb`` for more information.
 
 If you are looking for an extensive list of fish species, checkout
 ``aqadvisor_assets.py``. 
