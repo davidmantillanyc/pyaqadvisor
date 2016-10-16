@@ -48,6 +48,29 @@ about the scientic name.
 
 Please look at ``examples/example.py`` and  ``examples/example.ipynb`` for more information.
 
+Here's an example of how easy it use the new API:
+
+```
+from pyaqadvisor import Tank, Stocking
+
+if __name__ == '__main__':
+
+    stocking = Stocking().add('cardinal tetra', 5)\
+                         .add('panda cory', 6)\
+                         .add('lemon_tetra', 12)\
+                         .add('pearl gourami', 4)
+
+    print "My user-specified stocking is: ", stocking
+    print "I translate this into: ", stocking.aqadvisor_stock_list
+
+
+    t = Tank('55g').add_filter("AquaClear 30").add_stocking(stocking)
+    print "Aqadvisor tells me: ",
+    print t.get_stocking_level()
+```
+
+
+
 If you are looking for an extensive list of fish species, checkout
 ``aqadvisor_assets.py``. 
 
